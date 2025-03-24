@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> <!-- Conexão com o arquivo CSS --> 
+    
+</head>
+<body>
+    
+    <script src="script.js"></script>
+    <div>
+        <label for="turno">Que parte do dia estamos?</label>
+        <select name="turno" id="turno" onchange="atualizarCumprimento()">
+            <option value="0">Manhã</option>
+            <option value="1">Tarde</option>
+            <option value="2">Noite</option>
+        </select>
+    </div>
+    <div>
+        <label for="nome">Digite seu nome:</label>
+        <input type="text" id="nome" onchange="atualizarCumprimento()">
+    </div>
+    <p id="Cumprimento"></p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Valores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="mostrar-botoes" onclick="mostrarBotoes()">Clique para mostrar os botões</button>
+
+    <div id="controles" style="display: none;">
+        <button id="diminuir" onclick="diminuir()">Diminuir</button>
+        <button id="aumentar" onclick="aumentar()">Aumentar</button>
+        <p id="valor">0</p>
+        <div class="barra-container">
+            <div id="barra-progresso" class="barra"></div>
+        </div>
+    </div>
+
+</body>
+</html>
